@@ -1,0 +1,108 @@
+:root{
+    --background: #191919;
+    --container: #2D426389  ;
+    --primary-color: #C84B31;
+    --second-color: #ECDBBA;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--background);
+}
+
+body *{
+    font-family: sans-serif;
+    color: #ffe;
+}
+
+.container{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 250px;
+
+    padding: 20px;
+    border-radius: 25px;
+
+    background-image: linear-gradient(to bottom, var(--container), var(--background));
+}
+
+.container h1{
+    font-size: 25px;
+}
+
+#inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+#inputs #boleto{
+    padding: 7px 15px;
+    border: 0;
+    border-radius: 50px;
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    color: #635985;
+
+    outline: 0;
+}
+
+#inputs button{
+    padding: 7px 10px;
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background-color: var(--primary-color  );
+    transition: background 0.2s;
+    transition: color 0.2s;
+}
+
+#inputs button:hover{
+    background-color: var(--second-color);
+    color: black;
+}
+
+.container-resultado{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-resultado p.banco{
+    display: none;
+    width: 40px;
+    height: 40px;
+    
+    background-size: 40px 40px;
+}
+
+.container-resultado p.banco.caixa{
+    display: block;
+    background: url(./assets/logo-caixa.png) no-repeat;
+}
+.container-resultado p.banco.bradesco{
+    display: block;
+    background: url(./assets/logo-bradesco.png) no-repeat;
+}
+.container-resultado p.banco.safra{
+    display: block;
+    background: url(./assets/logo-safra.png) no-repeat;
+}
